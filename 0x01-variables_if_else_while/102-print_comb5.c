@@ -12,14 +12,19 @@ int main(void)
 	int ch;
 	int n;
 
-	for (ch = 48; ch < 58; ch++)
+	for (ch = 0; ch <= 98; ch++)
 	{
-		for (n = 48; n < 58; n++)
+		for (n = ch + 1; n <= 99; n++)
 		{
-			putchar(ch);
-			putchar(n);
-			if (ch != 57 || n != 57)
+			putchar((ch / 10) + '0');
+			putchar((ch % 10) + '0');
+			putchar(' ');
+			putchar((n / 10) + '0');
+			putchar((n % 10) + '0');
+
+			if (ch == 98 && n == 99)
 			{
+				continue;
 				putchar(',');
 				putchar(' ');
 			}
