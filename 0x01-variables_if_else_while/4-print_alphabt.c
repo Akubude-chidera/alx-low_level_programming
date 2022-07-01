@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+/**
+ * main - main block
+ * Description: Get a random alphabet and print in lower case
+ * Return: 0
+ */
+
+int main(void)
+{
+	char ch;
+
+	for (ch = 'a'; ch <= 'z'; ch++)
+	{
+		if ('a' != 'e' || 'a' != 'q')
+		putchar(ch);
+
+	}
+	putchar('\n');
+	return (0);
+}
+
+
