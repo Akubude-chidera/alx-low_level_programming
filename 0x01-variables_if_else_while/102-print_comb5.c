@@ -3,34 +3,50 @@
 
 /**
  * main - main block
- * Description: prints combination of two digits
+ * Description: A program that prints double combo
  * Return: 0
  */
 
 int main(void)
+
 {
-	int ch;
-	int n;
+	int c = 0;
+	int f_d;
+	int l_d;
 
-	for (ch = 0; ch <= 98; ch++)
+	int c2;
+	int f_d2;
+	int l_d2;
+
+	while (c <= 98)
 	{
-		for (n = ch + 1; n <= 99; n++)
+		f_d = (c / 10 + '0');
+		l_d = (c % 10 + '0');
+		c2 = 0;
+
+		while (c2 <= 99)
 		{
-			putchar((ch / 10) + '0');
-			putchar((ch % 10) + '0');
-			putchar(' ');
-			putchar((n / 10) + '0');
-			putchar((n % 10) + '0');
+			f_d2 = (c2 / 10 + '0');
+			l_d2 = (c2 % 10 + '0');
 
-			if (ch == 98 && n == 99)
+			if (c < c2)
 			{
-				continue;
-				putchar(',');
+				putchar(f_d);
+				putchar(l_d);
 				putchar(' ');
-			}
-		}
-	}
+				putchar(f_d2);
+				putchar(l_d2);
 
+				if (c != 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			c2++;
+		}
+		c++;
+	}
 	putchar('\n');
 	return (0);
 }
