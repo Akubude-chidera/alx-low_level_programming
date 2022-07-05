@@ -2,7 +2,7 @@
 
 /**
  * main - check the code
- *
+ * Description: print small alphabets
  * Return: Always 0
  */
 
