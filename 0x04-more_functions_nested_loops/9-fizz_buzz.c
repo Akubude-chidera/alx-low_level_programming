@@ -1,40 +1,40 @@
 #include <stdio.h>
-
 /**
- * main - prints the numbers from 1 to 100, followed by a new line
- * but for multiples of three prints Fizz instead of the number
- * and for the multiples of five prints Buzz
- * Return: Always 0 (Success)
-*/
+ * main - check code for ALX students.
+ *
+ * Return: void.
+ */
 
 int main(void)
 {
-	int n;
+	int i = 1;
 
-	for (n = 1; n <= 100; n++)
+	while (i <= 100)
 	{
-		if (n % 3 == 0 && n % 5 != 0)
+		if (i % 3 == 0 && i % 5 == 0)
 		{
-			printf(" Fizz");
+			printf("FizzBuzz");
 		}
-		else if (n % 5 == 0 && n % 3 != 0)
+		else if (i % 3 == 0)
 		{
-			printf(" Buzz");
+			printf("Fizz");
 		}
-		else if (n % 3 == 0 && n % 5 == 0)
+		else if (i % 5 == 0)
 		{
-			printf(" FizzBuzz");
-		}
-		else if (n == 1)
-		{
-			printf("%d", n);
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d", n);
+			printf("%i", i);
 		}
-	}
-	printf("\n");
+		if (i != 100)
+		{
+			putchar(' ');
+		}
 
+		i++;
+	}
+	putchar('\n');
 	return (0);
+
 }
