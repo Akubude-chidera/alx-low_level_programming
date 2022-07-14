@@ -3,7 +3,7 @@
 /**
  * _strcat - this is a function that strcat
  * @dest: destination string
- * @src: source parameter
+ * @src: source string
  * Return: a string
  */
 
@@ -13,11 +13,12 @@ char *_strcat(char *dest, char *src)
 
 	while (dest[l])
 		l++;
+
 	for (i = 0; src[i] != 0; i++)
 	{
 		dest[l] = src[i];
 		l += 1;
 	}
-	dest[len] = '\0';
+	dest[l] = '\0';
 	return (dest);
 }
