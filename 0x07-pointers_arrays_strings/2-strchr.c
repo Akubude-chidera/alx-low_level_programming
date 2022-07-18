@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
-* _strchr -> string character
-* @s: string param
+* _strchr - locates a character in a string
+* @s: string
 * @c: occurrence of character
 * Return: a string
 */
+
 char *_strchr(char *s, char c)
 {
 	while (*s)
