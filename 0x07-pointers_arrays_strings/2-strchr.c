@@ -3,23 +3,21 @@
 /**
 * _strchr -> string character
 * @s: string param
-* @c: char param
+* @c: occurrence of character
 * Return: a string
 */
 char *_strchr(char *s, char c)
 {
-		int i;
+	while (*s)
+	{
+		if (*s != c)
+			s++;
+		else
+			return (s);
+	}
+	if (c == '\0')
+		return (s);
 
-		while (1)
-		{
-			i = *s++;
-			if (i == c)
-			{
-				return (s - 1);
-			}
-			if (i == 0)
-			{
-				return (NULL);
-			}
-		}
+	return (NULL);
 }
+
